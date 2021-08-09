@@ -17,7 +17,7 @@ namespace NCMRViewer
             {
                 SqlConnection conn = new SqlConnection(Comm.ConnString);
 
-                string SQL = "SELECT TOP (50) *,NCMR_NO + '.jpg' AS ScanImage FROM [NCMR].[dbo].[NCMR_MAIN]";
+                string SQL = "SELECT TOP (50) *, NCMR_NO + '.jpg' AS ScanImage FROM [NCMR].[dbo].[NCMR_MAIN]";
                 using (SqlCommand sc = new SqlCommand(SQL, conn))
                 {
                     using (SqlDataAdapter sda = new SqlDataAdapter(sc))

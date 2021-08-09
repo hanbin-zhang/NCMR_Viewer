@@ -21,6 +21,9 @@ namespace NCMRViewer
         private void FMain_Load(object sender, EventArgs e)
         {
             DataTable dt = DAL.LoadData();
+
+            //FillList(dt);
+
             gridControl1.DataSource = dt;
             cardView1.RefreshData();
 
@@ -50,7 +53,7 @@ namespace NCMRViewer
 
         private void gridControl1_Click(object sender, EventArgs e)
         {
-          
+            MessageBox.Show("change");
         }
 
         private void cardView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
@@ -88,7 +91,6 @@ namespace NCMRViewer
                 pictureEdit1.Image = Image.FromFile(img);
                 Comm.CurrentImage = img;
             }
-
         }
 
         private void pictureEdit1_DoubleClick(object sender, EventArgs e)
@@ -98,6 +100,26 @@ namespace NCMRViewer
                 FImgView iv = new NCMRViewer.FImgView();
                 iv.ShowDialog(this);
             }
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelControl3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -53,6 +53,7 @@
             this.gcPRINT_LOC = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcREM = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcScanImage = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ggcID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ggcNCMR_NO = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -73,21 +74,28 @@
             this.ggcPRINT_LOC = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ggcREM = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ggcScanImage = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.tsMode = new DevExpress.XtraEditors.ToggleSwitch();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.FX_GX = new System.Windows.Forms.TextBox();
+            this.FX_YG = new System.Windows.Forms.TextBox();
+            this.NCMR编号 = new DevExpress.XtraEditors.LabelControl();
+            this.NCMR_NO = new System.Windows.Forms.TextBox();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.PROJECT_NO = new System.Windows.Forms.TextBox();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.Y_CTXL = new System.Windows.Forms.TextBox();
+            this.BHGMX = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).BeginInit();
             this.splitContainerControl1.Panel1.SuspendLayout();
@@ -105,16 +113,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tsMode.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl1
             // 
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl1.Location = new System.Drawing.Point(0, 134);
+            this.splitContainerControl1.Location = new System.Drawing.Point(0, 145);
             this.splitContainerControl1.Name = "splitContainerControl1";
             // 
             // splitContainerControl1.Panel1
@@ -126,7 +130,7 @@
             // 
             this.splitContainerControl1.Panel2.Controls.Add(this.pictureEdit1);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1123, 539);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1123, 584);
             this.splitContainerControl1.SplitterPosition = 635;
             this.splitContainerControl1.TabIndex = 0;
             // 
@@ -139,7 +143,7 @@
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1,
             this.repositoryItemMemoEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(635, 539);
+            this.gridControl1.Size = new System.Drawing.Size(635, 584);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.cardView1,
@@ -169,7 +173,9 @@
             this.gcWK_NAME,
             this.gcPRINT_LOC,
             this.gcREM,
-            this.gcScanImage});
+            this.gcScanImage,
+            this.gridColumn1});
+            this.cardView1.DetailHeight = 379;
             this.cardView1.GridControl = this.gridControl1;
             this.cardView1.Name = "cardView1";
             this.cardView1.OptionsView.ShowCardExpandButton = false;
@@ -230,13 +236,15 @@
             // 
             this.gcTXFG_WX.Caption = "返工返修";
             this.gcTXFG_WX.ColumnEdit = this.repositoryItemCheckEdit1;
-            this.gcTXFG_WX.FieldName = "TXFG_WX";
+            this.gcTXFG_WX.FieldName = "gcTXFG_WX";
             this.gcTXFG_WX.Name = "gcTXFG_WX";
             this.gcTXFG_WX.OptionsColumn.AllowEdit = false;
             this.gcTXFG_WX.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
             this.gcTXFG_WX.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gcTXFG_WX.OptionsFilter.AllowAutoFilter = false;
             this.gcTXFG_WX.OptionsFilter.AllowFilter = false;
+            this.gcTXFG_WX.UnboundDataType = typeof(bool);
+            this.gcTXFG_WX.UnboundExpression = "Iif([TXFG_WX] = \'10\', True, False)";
             this.gcTXFG_WX.Visible = true;
             this.gcTXFG_WX.VisibleIndex = 2;
             // 
@@ -430,6 +438,14 @@
             this.gcScanImage.OptionsFilter.AllowAutoFilter = false;
             this.gcScanImage.OptionsFilter.AllowFilter = false;
             // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "返工维修(计算源)";
+            this.gridColumn1.FieldName = "TXFG_WX";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 16;
+            // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -451,9 +467,24 @@
             this.ggcWK_NAME,
             this.ggcPRINT_LOC,
             this.ggcREM,
-            this.ggcScanImage});
+            this.ggcScanImage,
+            this.gridColumn2});
+            this.gridView1.DetailHeight = 379;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.AlignGroupSummaryInGroupRow = DevExpress.Utils.DefaultBoolean.False;
+            this.gridView1.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+            this.gridView1.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+            this.gridView1.OptionsBehavior.AllowFixedGroups = DevExpress.Utils.DefaultBoolean.False;
+            this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.OptionsCustomization.AllowColumnMoving = false;
+            this.gridView1.OptionsCustomization.AllowGroup = false;
+            this.gridView1.OptionsMenu.EnableColumnMenu = false;
+            this.gridView1.OptionsMenu.EnableFooterMenu = false;
+            this.gridView1.OptionsMenu.EnableGroupPanelMenu = false;
+            this.gridView1.OptionsMenu.ShowGroupSortSummaryItems = false;
+            this.gridView1.OptionsView.ShowGroupExpandCollapseButtons = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
             // ggcID
@@ -511,14 +542,15 @@
             // ggcTXFG_WX
             // 
             this.ggcTXFG_WX.Caption = "返工返修";
-            this.ggcTXFG_WX.ColumnEdit = this.repositoryItemCheckEdit1;
-            this.ggcTXFG_WX.FieldName = "TXFG_WX";
+            this.ggcTXFG_WX.FieldName = "ggcTXFG_WX";
             this.ggcTXFG_WX.Name = "ggcTXFG_WX";
             this.ggcTXFG_WX.OptionsColumn.AllowEdit = false;
             this.ggcTXFG_WX.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
             this.ggcTXFG_WX.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.ggcTXFG_WX.OptionsFilter.AllowAutoFilter = false;
             this.ggcTXFG_WX.OptionsFilter.AllowFilter = false;
+            this.ggcTXFG_WX.UnboundDataType = typeof(bool);
+            this.ggcTXFG_WX.UnboundExpression = "Iif([TXFG_WX] = \'10\', True, False)";
             this.ggcTXFG_WX.Visible = true;
             this.ggcTXFG_WX.VisibleIndex = 4;
             // 
@@ -701,6 +733,14 @@
             this.ggcScanImage.OptionsFilter.AllowAutoFilter = false;
             this.ggcScanImage.OptionsFilter.AllowFilter = false;
             // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "返工维修(计算源)";
+            this.gridColumn2.FieldName = "TXFG_WX";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 17;
+            // 
             // pictureEdit1
             // 
             this.pictureEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -709,7 +749,7 @@
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.pictureEdit1.Properties.ZoomingOperationMode = DevExpress.XtraEditors.Repository.ZoomingOperationMode.MouseWheel;
-            this.pictureEdit1.Size = new System.Drawing.Size(478, 539);
+            this.pictureEdit1.Size = new System.Drawing.Size(478, 584);
             this.pictureEdit1.TabIndex = 0;
             this.pictureEdit1.DoubleClick += new System.EventHandler(this.pictureEdit1_DoubleClick);
             // 
@@ -719,136 +759,188 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1123, 134);
+            this.panelControl1.Size = new System.Drawing.Size(1123, 145);
             this.panelControl1.TabIndex = 1;
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.dateTimePicker2);
+            this.groupControl1.Controls.Add(this.dateTimePicker1);
+            this.groupControl1.Controls.Add(this.BHGMX);
+            this.groupControl1.Controls.Add(this.Y_CTXL);
+            this.groupControl1.Controls.Add(this.labelControl4);
+            this.groupControl1.Controls.Add(this.labelControl3);
+            this.groupControl1.Controls.Add(this.PROJECT_NO);
+            this.groupControl1.Controls.Add(this.labelControl1);
+            this.groupControl1.Controls.Add(this.NCMR_NO);
+            this.groupControl1.Controls.Add(this.NCMR编号);
+            this.groupControl1.Controls.Add(this.FX_YG);
+            this.groupControl1.Controls.Add(this.FX_GX);
+            this.groupControl1.Controls.Add(this.labelControl6);
             this.groupControl1.Controls.Add(this.simpleButton2);
             this.groupControl1.Controls.Add(this.simpleButton1);
             this.groupControl1.Controls.Add(this.labelControl5);
             this.groupControl1.Controls.Add(this.tsMode);
-            this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Controls.Add(this.labelControl4);
-            this.groupControl1.Controls.Add(this.textEdit1);
-            this.groupControl1.Controls.Add(this.comboBoxEdit1);
-            this.groupControl1.Controls.Add(this.textEdit2);
-            this.groupControl1.Controls.Add(this.labelControl3);
             this.groupControl1.Controls.Add(this.labelControl2);
-            this.groupControl1.Controls.Add(this.textEdit3);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(2, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1119, 130);
+            this.groupControl1.Size = new System.Drawing.Size(1119, 141);
             this.groupControl1.TabIndex = 8;
             this.groupControl1.Text = "搜索";
             // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(168, 71);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(48, 13);
+            this.labelControl6.TabIndex = 15;
+            this.labelControl6.Text = "发现员工";
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.simpleButton2.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.simpleButton2.Location = new System.Drawing.Point(980, 77);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(127, 25);
+            this.simpleButton2.TabIndex = 11;
+            this.simpleButton2.Text = "开始搜索";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.simpleButton1.Location = new System.Drawing.Point(980, 39);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(127, 25);
+            this.simpleButton1.TabIndex = 10;
+            this.simpleButton1.Text = "清空条件";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(20, 92);
+            this.labelControl5.Location = new System.Drawing.Point(19, 42);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(48, 14);
+            this.labelControl5.Size = new System.Drawing.Size(48, 13);
             this.labelControl5.TabIndex = 9;
             this.labelControl5.Text = "卡片模式";
             // 
             // tsMode
             // 
             this.tsMode.EditValue = true;
-            this.tsMode.Location = new System.Drawing.Point(74, 90);
+            this.tsMode.Location = new System.Drawing.Point(73, 40);
             this.tsMode.Name = "tsMode";
             this.tsMode.Properties.OffText = "Off";
             this.tsMode.Properties.OnText = "On";
-            this.tsMode.Size = new System.Drawing.Size(95, 19);
+            this.tsMode.Size = new System.Drawing.Size(95, 18);
             this.tsMode.TabIndex = 8;
             this.tsMode.Toggled += new System.EventHandler(this.tsMode_Toggled);
             // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(168, 43);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(48, 13);
+            this.labelControl2.TabIndex = 3;
+            this.labelControl2.Text = "发现工序";
+            // 
+            // FX_GX
+            // 
+            this.FX_GX.Location = new System.Drawing.Point(234, 39);
+            this.FX_GX.Name = "FX_GX";
+            this.FX_GX.Size = new System.Drawing.Size(100, 21);
+            this.FX_GX.TabIndex = 16;
+            // 
+            // FX_YG
+            // 
+            this.FX_YG.Location = new System.Drawing.Point(234, 69);
+            this.FX_YG.Name = "FX_YG";
+            this.FX_YG.Size = new System.Drawing.Size(100, 21);
+            this.FX_YG.TabIndex = 17;
+            // 
+            // NCMR编号
+            // 
+            this.NCMR编号.Location = new System.Drawing.Point(358, 43);
+            this.NCMR编号.Name = "NCMR编号";
+            this.NCMR编号.Size = new System.Drawing.Size(53, 13);
+            this.NCMR编号.TabIndex = 18;
+            this.NCMR编号.Text = "NCMR编号";
+            // 
+            // NCMR_NO
+            // 
+            this.NCMR_NO.Location = new System.Drawing.Point(430, 40);
+            this.NCMR_NO.Name = "NCMR_NO";
+            this.NCMR_NO.Size = new System.Drawing.Size(100, 21);
+            this.NCMR_NO.TabIndex = 19;
+            // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(32, 39);
+            this.labelControl1.Location = new System.Drawing.Point(359, 72);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(36, 14);
-            this.labelControl1.TabIndex = 1;
+            this.labelControl1.Size = new System.Drawing.Size(36, 13);
+            this.labelControl1.TabIndex = 20;
             this.labelControl1.Text = "项目号";
             // 
-            // labelControl4
+            // PROJECT_NO
             // 
-            this.labelControl4.Location = new System.Drawing.Point(32, 66);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(36, 14);
-            this.labelControl4.TabIndex = 7;
-            this.labelControl4.Text = "项目号";
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.Location = new System.Drawing.Point(74, 36);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(100, 20);
-            this.textEdit1.TabIndex = 0;
-            // 
-            // comboBoxEdit1
-            // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(74, 63);
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Size = new System.Drawing.Size(100, 20);
-            this.comboBoxEdit1.TabIndex = 6;
-            // 
-            // textEdit2
-            // 
-            this.textEdit2.Location = new System.Drawing.Point(221, 36);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(100, 20);
-            this.textEdit2.TabIndex = 2;
+            this.PROJECT_NO.Location = new System.Drawing.Point(430, 69);
+            this.PROJECT_NO.Name = "PROJECT_NO";
+            this.PROJECT_NO.Size = new System.Drawing.Size(100, 21);
+            this.PROJECT_NO.TabIndex = 21;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(343, 39);
+            this.labelControl3.Location = new System.Drawing.Point(563, 43);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(36, 14);
-            this.labelControl3.TabIndex = 5;
-            this.labelControl3.Text = "项目号";
+            this.labelControl3.Size = new System.Drawing.Size(72, 13);
+            this.labelControl3.TabIndex = 22;
+            this.labelControl3.Text = "原测通序列号";
+            this.labelControl3.Click += new System.EventHandler(this.labelControl3_Click);
             // 
-            // labelControl2
+            // labelControl4
             // 
-            this.labelControl2.Location = new System.Drawing.Point(179, 39);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(36, 14);
-            this.labelControl2.TabIndex = 3;
-            this.labelControl2.Text = "项目号";
+            this.labelControl4.Location = new System.Drawing.Point(562, 72);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(60, 13);
+            this.labelControl4.TabIndex = 23;
+            this.labelControl4.Text = "不合格描述";
             // 
-            // textEdit3
+            // Y_CTXL
             // 
-            this.textEdit3.Location = new System.Drawing.Point(385, 36);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(100, 20);
-            this.textEdit3.TabIndex = 4;
+            this.Y_CTXL.Location = new System.Drawing.Point(655, 40);
+            this.Y_CTXL.Name = "Y_CTXL";
+            this.Y_CTXL.Size = new System.Drawing.Size(100, 21);
+            this.Y_CTXL.TabIndex = 24;
             // 
-            // simpleButton1
+            // BHGMX
             // 
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.simpleButton1.Location = new System.Drawing.Point(775, 39);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(127, 23);
-            this.simpleButton1.TabIndex = 10;
-            this.simpleButton1.Text = "清空条件";
+            this.BHGMX.Location = new System.Drawing.Point(655, 69);
+            this.BHGMX.Name = "BHGMX";
+            this.BHGMX.Size = new System.Drawing.Size(100, 21);
+            this.BHGMX.TabIndex = 25;
+            this.BHGMX.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // simpleButton2
+            // dateTimePicker1
             // 
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.simpleButton2.Location = new System.Drawing.Point(775, 83);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(127, 23);
-            this.simpleButton2.TabIndex = 11;
-            this.simpleButton2.Text = "开始搜索";
+            this.dateTimePicker1.Location = new System.Drawing.Point(768, 41);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 21);
+            this.dateTimePicker1.TabIndex = 26;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(768, 70);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 21);
+            this.dateTimePicker2.TabIndex = 27;
             // 
             // FMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1123, 673);
+            this.ClientSize = new System.Drawing.Size(1123, 729);
             this.Controls.Add(this.splitContainerControl1);
             this.Controls.Add(this.panelControl1);
             this.Name = "FMain";
@@ -874,10 +966,6 @@
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tsMode.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -930,20 +1018,28 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit1;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.ToggleSwitch tsMode;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private System.Windows.Forms.TextBox BHGMX;
+        private System.Windows.Forms.TextBox Y_CTXL;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private System.Windows.Forms.TextBox PROJECT_NO;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private System.Windows.Forms.TextBox NCMR_NO;
+        private DevExpress.XtraEditors.LabelControl NCMR编号;
+        private System.Windows.Forms.TextBox FX_YG;
+        private System.Windows.Forms.TextBox FX_GX;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
 
