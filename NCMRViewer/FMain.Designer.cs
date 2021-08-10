@@ -78,24 +78,24 @@
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.BHGMX = new System.Windows.Forms.TextBox();
+            this.Y_CTXL = new System.Windows.Forms.TextBox();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.PROJECT_NO = new System.Windows.Forms.TextBox();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.NCMR_NO = new System.Windows.Forms.TextBox();
+            this.NCMR编号 = new DevExpress.XtraEditors.LabelControl();
+            this.FX_YG = new System.Windows.Forms.TextBox();
+            this.FX_GX = new System.Windows.Forms.TextBox();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.tsMode = new DevExpress.XtraEditors.ToggleSwitch();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.FX_GX = new System.Windows.Forms.TextBox();
-            this.FX_YG = new System.Windows.Forms.TextBox();
-            this.NCMR编号 = new DevExpress.XtraEditors.LabelControl();
-            this.NCMR_NO = new System.Windows.Forms.TextBox();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.PROJECT_NO = new System.Windows.Forms.TextBox();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.Y_CTXL = new System.Windows.Forms.TextBox();
-            this.BHGMX = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).BeginInit();
             this.splitContainerControl1.Panel1.SuspendLayout();
@@ -789,6 +789,96 @@
             this.groupControl1.TabIndex = 8;
             this.groupControl1.Text = "搜索";
             // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(768, 70);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 21);
+            this.dateTimePicker2.TabIndex = 27;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(768, 41);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 21);
+            this.dateTimePicker1.TabIndex = 26;
+            // 
+            // BHGMX
+            // 
+            this.BHGMX.Location = new System.Drawing.Point(655, 69);
+            this.BHGMX.Name = "BHGMX";
+            this.BHGMX.Size = new System.Drawing.Size(100, 21);
+            this.BHGMX.TabIndex = 25;
+            this.BHGMX.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // Y_CTXL
+            // 
+            this.Y_CTXL.Location = new System.Drawing.Point(655, 40);
+            this.Y_CTXL.Name = "Y_CTXL";
+            this.Y_CTXL.Size = new System.Drawing.Size(100, 21);
+            this.Y_CTXL.TabIndex = 24;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(562, 72);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(60, 13);
+            this.labelControl4.TabIndex = 23;
+            this.labelControl4.Text = "不合格描述";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(563, 43);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(72, 13);
+            this.labelControl3.TabIndex = 22;
+            this.labelControl3.Text = "原测通序列号";
+            this.labelControl3.Click += new System.EventHandler(this.labelControl3_Click);
+            // 
+            // PROJECT_NO
+            // 
+            this.PROJECT_NO.Location = new System.Drawing.Point(430, 69);
+            this.PROJECT_NO.Name = "PROJECT_NO";
+            this.PROJECT_NO.Size = new System.Drawing.Size(100, 21);
+            this.PROJECT_NO.TabIndex = 21;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(359, 72);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(36, 13);
+            this.labelControl1.TabIndex = 20;
+            this.labelControl1.Text = "项目号";
+            // 
+            // NCMR_NO
+            // 
+            this.NCMR_NO.Location = new System.Drawing.Point(430, 40);
+            this.NCMR_NO.Name = "NCMR_NO";
+            this.NCMR_NO.Size = new System.Drawing.Size(100, 21);
+            this.NCMR_NO.TabIndex = 19;
+            // 
+            // NCMR编号
+            // 
+            this.NCMR编号.Location = new System.Drawing.Point(358, 43);
+            this.NCMR编号.Name = "NCMR编号";
+            this.NCMR编号.Size = new System.Drawing.Size(53, 13);
+            this.NCMR编号.TabIndex = 18;
+            this.NCMR编号.Text = "NCMR编号";
+            // 
+            // FX_YG
+            // 
+            this.FX_YG.Location = new System.Drawing.Point(234, 69);
+            this.FX_YG.Name = "FX_YG";
+            this.FX_YG.Size = new System.Drawing.Size(100, 21);
+            this.FX_YG.TabIndex = 17;
+            // 
+            // FX_GX
+            // 
+            this.FX_GX.Location = new System.Drawing.Point(234, 39);
+            this.FX_GX.Name = "FX_GX";
+            this.FX_GX.Size = new System.Drawing.Size(100, 21);
+            this.FX_GX.TabIndex = 16;
+            // 
             // labelControl6
             // 
             this.labelControl6.Location = new System.Drawing.Point(168, 71);
@@ -845,96 +935,6 @@
             this.labelControl2.Size = new System.Drawing.Size(48, 13);
             this.labelControl2.TabIndex = 3;
             this.labelControl2.Text = "发现工序";
-            // 
-            // FX_GX
-            // 
-            this.FX_GX.Location = new System.Drawing.Point(234, 39);
-            this.FX_GX.Name = "FX_GX";
-            this.FX_GX.Size = new System.Drawing.Size(100, 21);
-            this.FX_GX.TabIndex = 16;
-            // 
-            // FX_YG
-            // 
-            this.FX_YG.Location = new System.Drawing.Point(234, 69);
-            this.FX_YG.Name = "FX_YG";
-            this.FX_YG.Size = new System.Drawing.Size(100, 21);
-            this.FX_YG.TabIndex = 17;
-            // 
-            // NCMR编号
-            // 
-            this.NCMR编号.Location = new System.Drawing.Point(358, 43);
-            this.NCMR编号.Name = "NCMR编号";
-            this.NCMR编号.Size = new System.Drawing.Size(53, 13);
-            this.NCMR编号.TabIndex = 18;
-            this.NCMR编号.Text = "NCMR编号";
-            // 
-            // NCMR_NO
-            // 
-            this.NCMR_NO.Location = new System.Drawing.Point(430, 40);
-            this.NCMR_NO.Name = "NCMR_NO";
-            this.NCMR_NO.Size = new System.Drawing.Size(100, 21);
-            this.NCMR_NO.TabIndex = 19;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Location = new System.Drawing.Point(359, 72);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(36, 13);
-            this.labelControl1.TabIndex = 20;
-            this.labelControl1.Text = "项目号";
-            // 
-            // PROJECT_NO
-            // 
-            this.PROJECT_NO.Location = new System.Drawing.Point(430, 69);
-            this.PROJECT_NO.Name = "PROJECT_NO";
-            this.PROJECT_NO.Size = new System.Drawing.Size(100, 21);
-            this.PROJECT_NO.TabIndex = 21;
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Location = new System.Drawing.Point(563, 43);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(72, 13);
-            this.labelControl3.TabIndex = 22;
-            this.labelControl3.Text = "原测通序列号";
-            this.labelControl3.Click += new System.EventHandler(this.labelControl3_Click);
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Location = new System.Drawing.Point(562, 72);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(60, 13);
-            this.labelControl4.TabIndex = 23;
-            this.labelControl4.Text = "不合格描述";
-            // 
-            // Y_CTXL
-            // 
-            this.Y_CTXL.Location = new System.Drawing.Point(655, 40);
-            this.Y_CTXL.Name = "Y_CTXL";
-            this.Y_CTXL.Size = new System.Drawing.Size(100, 21);
-            this.Y_CTXL.TabIndex = 24;
-            // 
-            // BHGMX
-            // 
-            this.BHGMX.Location = new System.Drawing.Point(655, 69);
-            this.BHGMX.Name = "BHGMX";
-            this.BHGMX.Size = new System.Drawing.Size(100, 21);
-            this.BHGMX.TabIndex = 25;
-            this.BHGMX.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(768, 41);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 21);
-            this.dateTimePicker1.TabIndex = 26;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(768, 70);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 21);
-            this.dateTimePicker2.TabIndex = 27;
             // 
             // FMain
             // 

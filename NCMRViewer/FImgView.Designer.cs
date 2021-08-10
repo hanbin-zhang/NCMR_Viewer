@@ -40,10 +40,15 @@
             this.pictureEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureEdit1.Location = new System.Drawing.Point(0, 0);
             this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.AllowScrollOnMouseWheel = DevExpress.Utils.DefaultBoolean.True;
+            this.pictureEdit1.Properties.AllowScrollViaMouseDrag = true;
+            this.pictureEdit1.Properties.AllowZoom = DevExpress.Utils.DefaultBoolean.True;
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             this.pictureEdit1.Properties.ZoomingOperationMode = DevExpress.XtraEditors.Repository.ZoomingOperationMode.MouseWheel;
             this.pictureEdit1.Size = new System.Drawing.Size(284, 283);
             this.pictureEdit1.TabIndex = 1;
+            this.pictureEdit1.EditValueChanged += new System.EventHandler(this.pictureEdit1_EditValueChanged);
             this.pictureEdit1.Click += new System.EventHandler(this.pictureEdit1_Click);
             this.pictureEdit1.DoubleClick += new System.EventHandler(this.pictureEdit1_DoubleClick);
             this.pictureEdit1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureEdit1_MouseDown);
