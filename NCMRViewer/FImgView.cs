@@ -61,5 +61,21 @@ namespace NCMRViewer
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Image image = pictureEdit1.Image.Clone() as Image;
+            image.RotateFlip(RotateFlipType.Rotate270FlipNone);
+            pictureEdit1.Image.Dispose();
+            pictureEdit1.Image = image;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Image image = pictureEdit1.Image.Clone() as Image;
+            image.RotateFlip(RotateFlipType.Rotate90FlipNone);
+            pictureEdit1.Image.Dispose();
+            pictureEdit1.Image = image;
+        }
     }
 }

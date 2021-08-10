@@ -20,7 +20,7 @@ namespace NCMRViewer
 
         private void FMain_Load(object sender, EventArgs e)
         {
-            DataTable dt = DAL.LoadData();
+            DataTable dt = DAL.LoadData("SELECT *, NCMR_NO + '.jpg' AS ScanImage FROM [NCMR].[dbo].[NCMR_MAIN]");
 
             //FillList(dt);
 
@@ -53,7 +53,7 @@ namespace NCMRViewer
 
         private void gridControl1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("change");
+            
         }
 
         private void cardView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)

@@ -90,6 +90,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -103,6 +104,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\旋转%28Rotate%29小.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\旋转%28Rotate%29小小.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\旋转%28Rotate%29小小1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\旋转%28Rotate%29小小小.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\左左.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\左左左.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

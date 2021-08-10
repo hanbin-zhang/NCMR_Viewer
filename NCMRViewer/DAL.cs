@@ -10,14 +10,13 @@ namespace NCMRViewer
 {
    public static class DAL
     {
-        public static DataTable LoadData()
+        public static DataTable LoadData(string SQL)
         {
             DataTable DT = new DataTable();
             try
             {
                 SqlConnection conn = new SqlConnection(Comm.ConnString);
 
-                string SQL = "SELECT TOP (50) *, NCMR_NO + '.jpg' AS ScanImage FROM [NCMR].[dbo].[NCMR_MAIN]";
                 using (SqlCommand sc = new SqlCommand(SQL, conn))
                 {
                     using (SqlDataAdapter sda = new SqlDataAdapter(sc))
