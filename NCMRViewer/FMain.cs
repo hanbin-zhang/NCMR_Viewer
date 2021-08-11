@@ -104,7 +104,18 @@ namespace NCMRViewer
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-           
+            String sentence = "SELECT * FROM [NCMR].[dbo].[NCMR_MAIN] WHERE";
+            System.Windows.Forms.TextBox[] infos = { FX_GX, FX_YG, ZR_GX, ZR_YG, Y_CTXH, BHGMS, NCMR_NO, PROJECT_NO, REV };
+            foreach(System.Windows.Forms.TextBox contents in infos)
+            {
+                if (contents.Text != "")
+                {
+                    sentence = sentence + " " + contents.Name + " LIKE " + contents.Text + " AND ";
+                }
+            }
+            sentence = sentence + " FX_DATE >= " + dateTimePicker1.Text + " AND FX_DATE <= " + dateTimePicker2.Text;
+            Console.WriteLine(sentence);
+             
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)

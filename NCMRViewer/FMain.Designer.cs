@@ -87,7 +87,7 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.BHGMS = new System.Windows.Forms.TextBox();
-            this.Y_CTXL = new System.Windows.Forms.TextBox();
+            this.Y_CTXH = new System.Windows.Forms.TextBox();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.PROJECT_NO = new System.Windows.Forms.TextBox();
@@ -864,7 +864,7 @@
             this.groupControl1.Controls.Add(this.dateTimePicker2);
             this.groupControl1.Controls.Add(this.dateTimePicker1);
             this.groupControl1.Controls.Add(this.BHGMS);
-            this.groupControl1.Controls.Add(this.Y_CTXL);
+            this.groupControl1.Controls.Add(this.Y_CTXH);
             this.groupControl1.Controls.Add(this.labelControl4);
             this.groupControl1.Controls.Add(this.labelControl3);
             this.groupControl1.Controls.Add(this.PROJECT_NO);
@@ -934,6 +934,8 @@
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker2.Location = new System.Drawing.Point(1024, 81);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dateTimePicker2.Name = "dateTimePicker2";
@@ -942,6 +944,8 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(1024, 47);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dateTimePicker1.Name = "dateTimePicker1";
@@ -956,13 +960,13 @@
             this.BHGMS.Size = new System.Drawing.Size(132, 26);
             this.BHGMS.TabIndex = 25;
             // 
-            // Y_CTXL
+            // Y_CTXH
             // 
-            this.Y_CTXL.Location = new System.Drawing.Point(873, 46);
-            this.Y_CTXL.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Y_CTXL.Name = "Y_CTXL";
-            this.Y_CTXL.Size = new System.Drawing.Size(132, 26);
-            this.Y_CTXL.TabIndex = 24;
+            this.Y_CTXH.Location = new System.Drawing.Point(873, 46);
+            this.Y_CTXH.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Y_CTXH.Name = "Y_CTXH";
+            this.Y_CTXH.Size = new System.Drawing.Size(132, 26);
+            this.Y_CTXH.TabIndex = 24;
             // 
             // labelControl4
             // 
@@ -1189,7 +1193,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private System.Windows.Forms.TextBox BHGMS;
-        private System.Windows.Forms.TextBox Y_CTXL;
+        private System.Windows.Forms.TextBox Y_CTXH;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private System.Windows.Forms.TextBox PROJECT_NO;
