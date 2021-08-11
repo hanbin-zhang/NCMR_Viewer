@@ -78,9 +78,15 @@
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.ZR_GX = new System.Windows.Forms.TextBox();
+            this.ZR_YG = new System.Windows.Forms.TextBox();
+            this.REV = new System.Windows.Forms.TextBox();
+            this.责任员工 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.版本号 = new DevExpress.XtraEditors.LabelControl();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.BHGMX = new System.Windows.Forms.TextBox();
+            this.BHGMS = new System.Windows.Forms.TextBox();
             this.Y_CTXL = new System.Windows.Forms.TextBox();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -118,7 +124,8 @@
             // splitContainerControl1
             // 
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl1.Location = new System.Drawing.Point(0, 145);
+            this.splitContainerControl1.Location = new System.Drawing.Point(0, 167);
+            this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.splitContainerControl1.Name = "splitContainerControl1";
             // 
             // splitContainerControl1.Panel1
@@ -130,20 +137,22 @@
             // 
             this.splitContainerControl1.Panel2.Controls.Add(this.pictureEdit1);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1123, 584);
-            this.splitContainerControl1.SplitterPosition = 635;
+            this.splitContainerControl1.Size = new System.Drawing.Size(1497, 674);
+            this.splitContainerControl1.SplitterPosition = 847;
             this.splitContainerControl1.TabIndex = 0;
             // 
             // gridControl1
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.cardView1;
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1,
             this.repositoryItemMemoEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(635, 584);
+            this.gridControl1.Size = new System.Drawing.Size(847, 674);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.cardView1,
@@ -153,7 +162,7 @@
             // cardView1
             // 
             this.cardView1.CardCaptionFormat = "NCMR No.:{2} [ID:{1}]";
-            this.cardView1.CardWidth = 266;
+            this.cardView1.CardWidth = 355;
             this.cardView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gcID,
             this.gcNCMR_NO,
@@ -175,7 +184,7 @@
             this.gcREM,
             this.gcScanImage,
             this.gridColumn1});
-            this.cardView1.DetailHeight = 379;
+            this.cardView1.DetailHeight = 437;
             this.cardView1.GridControl = this.gridControl1;
             this.cardView1.Name = "cardView1";
             this.cardView1.OptionsView.ShowCardExpandButton = false;
@@ -188,28 +197,33 @@
             // 
             this.gcID.Caption = "ID";
             this.gcID.FieldName = "ID";
+            this.gcID.MinWidth = 27;
             this.gcID.Name = "gcID";
             this.gcID.OptionsColumn.AllowEdit = false;
             this.gcID.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
             this.gcID.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gcID.OptionsFilter.AllowAutoFilter = false;
             this.gcID.OptionsFilter.AllowFilter = false;
+            this.gcID.Width = 100;
             // 
             // gcNCMR_NO
             // 
             this.gcNCMR_NO.Caption = "NCMR编号";
             this.gcNCMR_NO.FieldName = "NCMR_NO";
+            this.gcNCMR_NO.MinWidth = 27;
             this.gcNCMR_NO.Name = "gcNCMR_NO";
             this.gcNCMR_NO.OptionsColumn.AllowEdit = false;
             this.gcNCMR_NO.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
             this.gcNCMR_NO.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gcNCMR_NO.OptionsFilter.AllowAutoFilter = false;
             this.gcNCMR_NO.OptionsFilter.AllowFilter = false;
+            this.gcNCMR_NO.Width = 100;
             // 
             // gcPROJECT_NO
             // 
             this.gcPROJECT_NO.Caption = "项目号";
             this.gcPROJECT_NO.FieldName = "PROJECT_NO";
+            this.gcPROJECT_NO.MinWidth = 27;
             this.gcPROJECT_NO.Name = "gcPROJECT_NO";
             this.gcPROJECT_NO.OptionsColumn.AllowEdit = false;
             this.gcPROJECT_NO.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -218,11 +232,13 @@
             this.gcPROJECT_NO.OptionsFilter.AllowFilter = false;
             this.gcPROJECT_NO.Visible = true;
             this.gcPROJECT_NO.VisibleIndex = 0;
+            this.gcPROJECT_NO.Width = 100;
             // 
             // gcMO_QTY
             // 
             this.gcMO_QTY.Caption = "制令数量";
             this.gcMO_QTY.FieldName = "MO_QTY";
+            this.gcMO_QTY.MinWidth = 27;
             this.gcMO_QTY.Name = "gcMO_QTY";
             this.gcMO_QTY.OptionsColumn.AllowEdit = false;
             this.gcMO_QTY.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -231,12 +247,14 @@
             this.gcMO_QTY.OptionsFilter.AllowFilter = false;
             this.gcMO_QTY.Visible = true;
             this.gcMO_QTY.VisibleIndex = 1;
+            this.gcMO_QTY.Width = 100;
             // 
             // gcTXFG_WX
             // 
             this.gcTXFG_WX.Caption = "返工返修";
             this.gcTXFG_WX.ColumnEdit = this.repositoryItemCheckEdit1;
             this.gcTXFG_WX.FieldName = "gcTXFG_WX";
+            this.gcTXFG_WX.MinWidth = 27;
             this.gcTXFG_WX.Name = "gcTXFG_WX";
             this.gcTXFG_WX.OptionsColumn.AllowEdit = false;
             this.gcTXFG_WX.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -247,6 +265,7 @@
             this.gcTXFG_WX.UnboundExpression = "Iif([TXFG_WX] = \'10\', True, False)";
             this.gcTXFG_WX.Visible = true;
             this.gcTXFG_WX.VisibleIndex = 2;
+            this.gcTXFG_WX.Width = 100;
             // 
             // repositoryItemCheckEdit1
             // 
@@ -257,6 +276,7 @@
             // 
             this.gcZSH.Caption = "追溯号";
             this.gcZSH.FieldName = "ZSH";
+            this.gcZSH.MinWidth = 27;
             this.gcZSH.Name = "gcZSH";
             this.gcZSH.OptionsColumn.AllowEdit = false;
             this.gcZSH.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -265,11 +285,13 @@
             this.gcZSH.OptionsFilter.AllowFilter = false;
             this.gcZSH.Visible = true;
             this.gcZSH.VisibleIndex = 3;
+            this.gcZSH.Width = 100;
             // 
             // gcREV
             // 
             this.gcREV.Caption = "版本号";
             this.gcREV.FieldName = "REV";
+            this.gcREV.MinWidth = 27;
             this.gcREV.Name = "gcREV";
             this.gcREV.OptionsColumn.AllowEdit = false;
             this.gcREV.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -278,11 +300,13 @@
             this.gcREV.OptionsFilter.AllowFilter = false;
             this.gcREV.Visible = true;
             this.gcREV.VisibleIndex = 4;
+            this.gcREV.Width = 100;
             // 
             // gcFX_GX
             // 
             this.gcFX_GX.Caption = "发现工序";
             this.gcFX_GX.FieldName = "FX_GX";
+            this.gcFX_GX.MinWidth = 27;
             this.gcFX_GX.Name = "gcFX_GX";
             this.gcFX_GX.OptionsColumn.AllowEdit = false;
             this.gcFX_GX.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -291,11 +315,13 @@
             this.gcFX_GX.OptionsFilter.AllowFilter = false;
             this.gcFX_GX.Visible = true;
             this.gcFX_GX.VisibleIndex = 5;
+            this.gcFX_GX.Width = 100;
             // 
             // gcFX_YG
             // 
             this.gcFX_YG.Caption = "发现员工";
             this.gcFX_YG.FieldName = "FX_YG";
+            this.gcFX_YG.MinWidth = 27;
             this.gcFX_YG.Name = "gcFX_YG";
             this.gcFX_YG.OptionsColumn.AllowEdit = false;
             this.gcFX_YG.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -304,11 +330,13 @@
             this.gcFX_YG.OptionsFilter.AllowFilter = false;
             this.gcFX_YG.Visible = true;
             this.gcFX_YG.VisibleIndex = 6;
+            this.gcFX_YG.Width = 100;
             // 
             // gcQTY
             // 
             this.gcQTY.Caption = "不合格数量";
             this.gcQTY.FieldName = "QTY";
+            this.gcQTY.MinWidth = 27;
             this.gcQTY.Name = "gcQTY";
             this.gcQTY.OptionsColumn.AllowEdit = false;
             this.gcQTY.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -317,11 +345,13 @@
             this.gcQTY.OptionsFilter.AllowFilter = false;
             this.gcQTY.Visible = true;
             this.gcQTY.VisibleIndex = 7;
+            this.gcQTY.Width = 100;
             // 
             // gcFX_DATE
             // 
             this.gcFX_DATE.Caption = "发现日期";
             this.gcFX_DATE.FieldName = "FX_DATE";
+            this.gcFX_DATE.MinWidth = 27;
             this.gcFX_DATE.Name = "gcFX_DATE";
             this.gcFX_DATE.OptionsColumn.AllowEdit = false;
             this.gcFX_DATE.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -330,11 +360,13 @@
             this.gcFX_DATE.OptionsFilter.AllowFilter = false;
             this.gcFX_DATE.Visible = true;
             this.gcFX_DATE.VisibleIndex = 8;
+            this.gcFX_DATE.Width = 100;
             // 
             // gcZR_GX
             // 
             this.gcZR_GX.Caption = "责任工序";
             this.gcZR_GX.FieldName = "ZR_GX";
+            this.gcZR_GX.MinWidth = 27;
             this.gcZR_GX.Name = "gcZR_GX";
             this.gcZR_GX.OptionsColumn.AllowEdit = false;
             this.gcZR_GX.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -343,11 +375,13 @@
             this.gcZR_GX.OptionsFilter.AllowFilter = false;
             this.gcZR_GX.Visible = true;
             this.gcZR_GX.VisibleIndex = 9;
+            this.gcZR_GX.Width = 100;
             // 
             // gcZR_YG
             // 
             this.gcZR_YG.Caption = "责任员工";
             this.gcZR_YG.FieldName = "ZR_YG";
+            this.gcZR_YG.MinWidth = 27;
             this.gcZR_YG.Name = "gcZR_YG";
             this.gcZR_YG.OptionsColumn.AllowEdit = false;
             this.gcZR_YG.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -356,11 +390,13 @@
             this.gcZR_YG.OptionsFilter.AllowFilter = false;
             this.gcZR_YG.Visible = true;
             this.gcZR_YG.VisibleIndex = 10;
+            this.gcZR_YG.Width = 100;
             // 
             // gcY_CTXH
             // 
             this.gcY_CTXH.Caption = "原测通序列号";
             this.gcY_CTXH.FieldName = "Y_CTXH";
+            this.gcY_CTXH.MinWidth = 27;
             this.gcY_CTXH.Name = "gcY_CTXH";
             this.gcY_CTXH.OptionsColumn.AllowEdit = false;
             this.gcY_CTXH.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -369,12 +405,14 @@
             this.gcY_CTXH.OptionsFilter.AllowFilter = false;
             this.gcY_CTXH.Visible = true;
             this.gcY_CTXH.VisibleIndex = 11;
+            this.gcY_CTXH.Width = 100;
             // 
             // gcBHGMS
             // 
             this.gcBHGMS.Caption = "不合格描述";
             this.gcBHGMS.ColumnEdit = this.repositoryItemMemoEdit1;
             this.gcBHGMS.FieldName = "BHGMS";
+            this.gcBHGMS.MinWidth = 27;
             this.gcBHGMS.Name = "gcBHGMS";
             this.gcBHGMS.OptionsColumn.AllowEdit = false;
             this.gcBHGMS.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -383,6 +421,7 @@
             this.gcBHGMS.OptionsFilter.AllowFilter = false;
             this.gcBHGMS.Visible = true;
             this.gcBHGMS.VisibleIndex = 12;
+            this.gcBHGMS.Width = 100;
             // 
             // repositoryItemMemoEdit1
             // 
@@ -392,6 +431,7 @@
             // 
             this.gcWK_NAME.Caption = "录入账号";
             this.gcWK_NAME.FieldName = "WK_NAME";
+            this.gcWK_NAME.MinWidth = 27;
             this.gcWK_NAME.Name = "gcWK_NAME";
             this.gcWK_NAME.OptionsColumn.AllowEdit = false;
             this.gcWK_NAME.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -400,11 +440,13 @@
             this.gcWK_NAME.OptionsFilter.AllowFilter = false;
             this.gcWK_NAME.Visible = true;
             this.gcWK_NAME.VisibleIndex = 13;
+            this.gcWK_NAME.Width = 100;
             // 
             // gcPRINT_LOC
             // 
             this.gcPRINT_LOC.Caption = "打印地点";
             this.gcPRINT_LOC.FieldName = "PRINT_LOC";
+            this.gcPRINT_LOC.MinWidth = 27;
             this.gcPRINT_LOC.Name = "gcPRINT_LOC";
             this.gcPRINT_LOC.OptionsColumn.AllowEdit = false;
             this.gcPRINT_LOC.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -413,11 +455,13 @@
             this.gcPRINT_LOC.OptionsFilter.AllowFilter = false;
             this.gcPRINT_LOC.Visible = true;
             this.gcPRINT_LOC.VisibleIndex = 14;
+            this.gcPRINT_LOC.Width = 100;
             // 
             // gcREM
             // 
             this.gcREM.Caption = "备注信息";
             this.gcREM.FieldName = "REM";
+            this.gcREM.MinWidth = 27;
             this.gcREM.Name = "gcREM";
             this.gcREM.OptionsColumn.AllowEdit = false;
             this.gcREM.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -426,25 +470,30 @@
             this.gcREM.OptionsFilter.AllowFilter = false;
             this.gcREM.Visible = true;
             this.gcREM.VisibleIndex = 15;
+            this.gcREM.Width = 100;
             // 
             // gcScanImage
             // 
             this.gcScanImage.Caption = "扫描图";
             this.gcScanImage.FieldName = "ScanImage";
+            this.gcScanImage.MinWidth = 27;
             this.gcScanImage.Name = "gcScanImage";
             this.gcScanImage.OptionsColumn.AllowEdit = false;
             this.gcScanImage.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
             this.gcScanImage.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gcScanImage.OptionsFilter.AllowAutoFilter = false;
             this.gcScanImage.OptionsFilter.AllowFilter = false;
+            this.gcScanImage.Width = 100;
             // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "返工维修(计算源)";
             this.gridColumn1.FieldName = "TXFG_WX";
+            this.gridColumn1.MinWidth = 27;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 16;
+            this.gridColumn1.Width = 100;
             // 
             // gridView1
             // 
@@ -469,7 +518,7 @@
             this.ggcREM,
             this.ggcScanImage,
             this.gridColumn2});
-            this.gridView1.DetailHeight = 379;
+            this.gridView1.DetailHeight = 437;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.AlignGroupSummaryInGroupRow = DevExpress.Utils.DefaultBoolean.False;
@@ -491,6 +540,7 @@
             // 
             this.ggcID.Caption = "ID";
             this.ggcID.FieldName = "ID";
+            this.ggcID.MinWidth = 27;
             this.ggcID.Name = "ggcID";
             this.ggcID.OptionsColumn.AllowEdit = false;
             this.ggcID.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -499,11 +549,13 @@
             this.ggcID.OptionsFilter.AllowFilter = false;
             this.ggcID.Visible = true;
             this.ggcID.VisibleIndex = 0;
+            this.ggcID.Width = 100;
             // 
             // ggcNCMR_NO
             // 
             this.ggcNCMR_NO.Caption = "NCMR编号";
             this.ggcNCMR_NO.FieldName = "NCMR_NO";
+            this.ggcNCMR_NO.MinWidth = 27;
             this.ggcNCMR_NO.Name = "ggcNCMR_NO";
             this.ggcNCMR_NO.OptionsColumn.AllowEdit = false;
             this.ggcNCMR_NO.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -512,11 +564,13 @@
             this.ggcNCMR_NO.OptionsFilter.AllowFilter = false;
             this.ggcNCMR_NO.Visible = true;
             this.ggcNCMR_NO.VisibleIndex = 1;
+            this.ggcNCMR_NO.Width = 100;
             // 
             // ggcPROJECT_NO
             // 
             this.ggcPROJECT_NO.Caption = "项目号";
             this.ggcPROJECT_NO.FieldName = "PROJECT_NO";
+            this.ggcPROJECT_NO.MinWidth = 27;
             this.ggcPROJECT_NO.Name = "ggcPROJECT_NO";
             this.ggcPROJECT_NO.OptionsColumn.AllowEdit = false;
             this.ggcPROJECT_NO.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -525,11 +579,13 @@
             this.ggcPROJECT_NO.OptionsFilter.AllowFilter = false;
             this.ggcPROJECT_NO.Visible = true;
             this.ggcPROJECT_NO.VisibleIndex = 2;
+            this.ggcPROJECT_NO.Width = 100;
             // 
             // ggcMO_QTY
             // 
             this.ggcMO_QTY.Caption = "制令数量";
             this.ggcMO_QTY.FieldName = "MO_QTY";
+            this.ggcMO_QTY.MinWidth = 27;
             this.ggcMO_QTY.Name = "ggcMO_QTY";
             this.ggcMO_QTY.OptionsColumn.AllowEdit = false;
             this.ggcMO_QTY.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -538,11 +594,13 @@
             this.ggcMO_QTY.OptionsFilter.AllowFilter = false;
             this.ggcMO_QTY.Visible = true;
             this.ggcMO_QTY.VisibleIndex = 3;
+            this.ggcMO_QTY.Width = 100;
             // 
             // ggcTXFG_WX
             // 
             this.ggcTXFG_WX.Caption = "返工返修";
             this.ggcTXFG_WX.FieldName = "ggcTXFG_WX";
+            this.ggcTXFG_WX.MinWidth = 27;
             this.ggcTXFG_WX.Name = "ggcTXFG_WX";
             this.ggcTXFG_WX.OptionsColumn.AllowEdit = false;
             this.ggcTXFG_WX.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -553,11 +611,13 @@
             this.ggcTXFG_WX.UnboundExpression = "Iif([TXFG_WX] = \'10\', True, False)";
             this.ggcTXFG_WX.Visible = true;
             this.ggcTXFG_WX.VisibleIndex = 4;
+            this.ggcTXFG_WX.Width = 100;
             // 
             // ggcZSH
             // 
             this.ggcZSH.Caption = "追溯号";
             this.ggcZSH.FieldName = "ZSH";
+            this.ggcZSH.MinWidth = 27;
             this.ggcZSH.Name = "ggcZSH";
             this.ggcZSH.OptionsColumn.AllowEdit = false;
             this.ggcZSH.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -566,11 +626,13 @@
             this.ggcZSH.OptionsFilter.AllowFilter = false;
             this.ggcZSH.Visible = true;
             this.ggcZSH.VisibleIndex = 5;
+            this.ggcZSH.Width = 100;
             // 
             // ggcREV
             // 
             this.ggcREV.Caption = "版本号";
             this.ggcREV.FieldName = "REV";
+            this.ggcREV.MinWidth = 27;
             this.ggcREV.Name = "ggcREV";
             this.ggcREV.OptionsColumn.AllowEdit = false;
             this.ggcREV.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -579,11 +641,13 @@
             this.ggcREV.OptionsFilter.AllowFilter = false;
             this.ggcREV.Visible = true;
             this.ggcREV.VisibleIndex = 6;
+            this.ggcREV.Width = 100;
             // 
             // ggcFX_GX
             // 
             this.ggcFX_GX.Caption = "发现工序";
             this.ggcFX_GX.FieldName = "FX_GX";
+            this.ggcFX_GX.MinWidth = 27;
             this.ggcFX_GX.Name = "ggcFX_GX";
             this.ggcFX_GX.OptionsColumn.AllowEdit = false;
             this.ggcFX_GX.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -592,11 +656,13 @@
             this.ggcFX_GX.OptionsFilter.AllowFilter = false;
             this.ggcFX_GX.Visible = true;
             this.ggcFX_GX.VisibleIndex = 7;
+            this.ggcFX_GX.Width = 100;
             // 
             // ggcFX_YG
             // 
             this.ggcFX_YG.Caption = "发现员工";
             this.ggcFX_YG.FieldName = "FX_YG";
+            this.ggcFX_YG.MinWidth = 27;
             this.ggcFX_YG.Name = "ggcFX_YG";
             this.ggcFX_YG.OptionsColumn.AllowEdit = false;
             this.ggcFX_YG.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -605,11 +671,13 @@
             this.ggcFX_YG.OptionsFilter.AllowFilter = false;
             this.ggcFX_YG.Visible = true;
             this.ggcFX_YG.VisibleIndex = 8;
+            this.ggcFX_YG.Width = 100;
             // 
             // ggcQTY
             // 
             this.ggcQTY.Caption = "不合格数量";
             this.ggcQTY.FieldName = "QTY";
+            this.ggcQTY.MinWidth = 27;
             this.ggcQTY.Name = "ggcQTY";
             this.ggcQTY.OptionsColumn.AllowEdit = false;
             this.ggcQTY.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -618,11 +686,13 @@
             this.ggcQTY.OptionsFilter.AllowFilter = false;
             this.ggcQTY.Visible = true;
             this.ggcQTY.VisibleIndex = 9;
+            this.ggcQTY.Width = 100;
             // 
             // ggcFX_DATE
             // 
             this.ggcFX_DATE.Caption = "发现日期";
             this.ggcFX_DATE.FieldName = "FX_DATE";
+            this.ggcFX_DATE.MinWidth = 27;
             this.ggcFX_DATE.Name = "ggcFX_DATE";
             this.ggcFX_DATE.OptionsColumn.AllowEdit = false;
             this.ggcFX_DATE.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -631,11 +701,13 @@
             this.ggcFX_DATE.OptionsFilter.AllowFilter = false;
             this.ggcFX_DATE.Visible = true;
             this.ggcFX_DATE.VisibleIndex = 10;
+            this.ggcFX_DATE.Width = 100;
             // 
             // ggcZR_GX
             // 
             this.ggcZR_GX.Caption = "责任工序";
             this.ggcZR_GX.FieldName = "ZR_GX";
+            this.ggcZR_GX.MinWidth = 27;
             this.ggcZR_GX.Name = "ggcZR_GX";
             this.ggcZR_GX.OptionsColumn.AllowEdit = false;
             this.ggcZR_GX.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -644,11 +716,13 @@
             this.ggcZR_GX.OptionsFilter.AllowFilter = false;
             this.ggcZR_GX.Visible = true;
             this.ggcZR_GX.VisibleIndex = 11;
+            this.ggcZR_GX.Width = 100;
             // 
             // ggcZR_YG
             // 
             this.ggcZR_YG.Caption = "责任员工";
             this.ggcZR_YG.FieldName = "ZR_YG";
+            this.ggcZR_YG.MinWidth = 27;
             this.ggcZR_YG.Name = "ggcZR_YG";
             this.ggcZR_YG.OptionsColumn.AllowEdit = false;
             this.ggcZR_YG.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -657,11 +731,13 @@
             this.ggcZR_YG.OptionsFilter.AllowFilter = false;
             this.ggcZR_YG.Visible = true;
             this.ggcZR_YG.VisibleIndex = 12;
+            this.ggcZR_YG.Width = 100;
             // 
             // ggcY_CTXH
             // 
             this.ggcY_CTXH.Caption = "原测通序列号";
             this.ggcY_CTXH.FieldName = "Y_CTXH";
+            this.ggcY_CTXH.MinWidth = 27;
             this.ggcY_CTXH.Name = "ggcY_CTXH";
             this.ggcY_CTXH.OptionsColumn.AllowEdit = false;
             this.ggcY_CTXH.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -670,12 +746,14 @@
             this.ggcY_CTXH.OptionsFilter.AllowFilter = false;
             this.ggcY_CTXH.Visible = true;
             this.ggcY_CTXH.VisibleIndex = 13;
+            this.ggcY_CTXH.Width = 100;
             // 
             // ggcBHGMS
             // 
             this.ggcBHGMS.Caption = "不合格描述";
             this.ggcBHGMS.ColumnEdit = this.repositoryItemMemoEdit1;
             this.ggcBHGMS.FieldName = "BHGMS";
+            this.ggcBHGMS.MinWidth = 27;
             this.ggcBHGMS.Name = "ggcBHGMS";
             this.ggcBHGMS.OptionsColumn.AllowEdit = false;
             this.ggcBHGMS.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -684,22 +762,26 @@
             this.ggcBHGMS.OptionsFilter.AllowFilter = false;
             this.ggcBHGMS.Visible = true;
             this.ggcBHGMS.VisibleIndex = 14;
+            this.ggcBHGMS.Width = 100;
             // 
             // ggcWK_NAME
             // 
             this.ggcWK_NAME.Caption = "录入账号";
             this.ggcWK_NAME.FieldName = "WK_NAME";
+            this.ggcWK_NAME.MinWidth = 27;
             this.ggcWK_NAME.Name = "ggcWK_NAME";
             this.ggcWK_NAME.OptionsColumn.AllowEdit = false;
             this.ggcWK_NAME.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
             this.ggcWK_NAME.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.ggcWK_NAME.OptionsFilter.AllowAutoFilter = false;
             this.ggcWK_NAME.OptionsFilter.AllowFilter = false;
+            this.ggcWK_NAME.Width = 100;
             // 
             // ggcPRINT_LOC
             // 
             this.ggcPRINT_LOC.Caption = "打印地点";
             this.ggcPRINT_LOC.FieldName = "PRINT_LOC";
+            this.ggcPRINT_LOC.MinWidth = 27;
             this.ggcPRINT_LOC.Name = "ggcPRINT_LOC";
             this.ggcPRINT_LOC.OptionsColumn.AllowEdit = false;
             this.ggcPRINT_LOC.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -708,11 +790,13 @@
             this.ggcPRINT_LOC.OptionsFilter.AllowFilter = false;
             this.ggcPRINT_LOC.Visible = true;
             this.ggcPRINT_LOC.VisibleIndex = 15;
+            this.ggcPRINT_LOC.Width = 100;
             // 
             // ggcREM
             // 
             this.ggcREM.Caption = "备注信息";
             this.ggcREM.FieldName = "REM";
+            this.ggcREM.MinWidth = 27;
             this.ggcREM.Name = "ggcREM";
             this.ggcREM.OptionsColumn.AllowEdit = false;
             this.ggcREM.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -721,35 +805,41 @@
             this.ggcREM.OptionsFilter.AllowFilter = false;
             this.ggcREM.Visible = true;
             this.ggcREM.VisibleIndex = 16;
+            this.ggcREM.Width = 100;
             // 
             // ggcScanImage
             // 
             this.ggcScanImage.Caption = "扫描图";
             this.ggcScanImage.FieldName = "ScanImage";
+            this.ggcScanImage.MinWidth = 27;
             this.ggcScanImage.Name = "ggcScanImage";
             this.ggcScanImage.OptionsColumn.AllowEdit = false;
             this.ggcScanImage.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
             this.ggcScanImage.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.ggcScanImage.OptionsFilter.AllowAutoFilter = false;
             this.ggcScanImage.OptionsFilter.AllowFilter = false;
+            this.ggcScanImage.Width = 100;
             // 
             // gridColumn2
             // 
             this.gridColumn2.Caption = "返工维修(计算源)";
             this.gridColumn2.FieldName = "TXFG_WX";
+            this.gridColumn2.MinWidth = 27;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 17;
+            this.gridColumn2.Width = 100;
             // 
             // pictureEdit1
             // 
             this.pictureEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureEdit1.Location = new System.Drawing.Point(0, 0);
+            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.pictureEdit1.Properties.ZoomingOperationMode = DevExpress.XtraEditors.Repository.ZoomingOperationMode.MouseWheel;
-            this.pictureEdit1.Size = new System.Drawing.Size(478, 584);
+            this.pictureEdit1.Size = new System.Drawing.Size(638, 674);
             this.pictureEdit1.TabIndex = 0;
             this.pictureEdit1.DoubleClick += new System.EventHandler(this.pictureEdit1_DoubleClick);
             // 
@@ -758,15 +848,22 @@
             this.panelControl1.Controls.Add(this.groupControl1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1123, 145);
+            this.panelControl1.Size = new System.Drawing.Size(1497, 167);
             this.panelControl1.TabIndex = 1;
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.ZR_GX);
+            this.groupControl1.Controls.Add(this.ZR_YG);
+            this.groupControl1.Controls.Add(this.REV);
+            this.groupControl1.Controls.Add(this.责任员工);
+            this.groupControl1.Controls.Add(this.labelControl8);
+            this.groupControl1.Controls.Add(this.版本号);
             this.groupControl1.Controls.Add(this.dateTimePicker2);
             this.groupControl1.Controls.Add(this.dateTimePicker1);
-            this.groupControl1.Controls.Add(this.BHGMX);
+            this.groupControl1.Controls.Add(this.BHGMS);
             this.groupControl1.Controls.Add(this.Y_CTXL);
             this.groupControl1.Controls.Add(this.labelControl4);
             this.groupControl1.Controls.Add(this.labelControl3);
@@ -784,106 +881,163 @@
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(2, 2);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1119, 141);
+            this.groupControl1.Size = new System.Drawing.Size(1493, 163);
             this.groupControl1.TabIndex = 8;
             this.groupControl1.Text = "搜索";
             // 
+            // ZR_GX
+            // 
+            this.ZR_GX.Location = new System.Drawing.Point(573, 47);
+            this.ZR_GX.Name = "ZR_GX";
+            this.ZR_GX.Size = new System.Drawing.Size(132, 26);
+            this.ZR_GX.TabIndex = 33;
+            // 
+            // ZR_YG
+            // 
+            this.ZR_YG.Location = new System.Drawing.Point(573, 84);
+            this.ZR_YG.Name = "ZR_YG";
+            this.ZR_YG.Size = new System.Drawing.Size(132, 26);
+            this.ZR_YG.TabIndex = 32;
+            // 
+            // REV
+            // 
+            this.REV.Location = new System.Drawing.Point(873, 121);
+            this.REV.Name = "REV";
+            this.REV.Size = new System.Drawing.Size(132, 26);
+            this.REV.TabIndex = 31;
+            // 
+            // 责任员工
+            // 
+            this.责任员工.Location = new System.Drawing.Point(479, 87);
+            this.责任员工.Name = "责任员工";
+            this.责任员工.Size = new System.Drawing.Size(60, 18);
+            this.责任员工.TabIndex = 30;
+            this.责任员工.Text = "责任员工";
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Location = new System.Drawing.Point(479, 49);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(60, 18);
+            this.labelControl8.TabIndex = 29;
+            this.labelControl8.Text = "责任工序";
+            // 
+            // 版本号
+            // 
+            this.版本号.Location = new System.Drawing.Point(751, 124);
+            this.版本号.Name = "版本号";
+            this.版本号.Size = new System.Drawing.Size(45, 18);
+            this.版本号.TabIndex = 28;
+            this.版本号.Text = "版本号";
+            // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(768, 70);
+            this.dateTimePicker2.Location = new System.Drawing.Point(1024, 81);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 21);
+            this.dateTimePicker2.Size = new System.Drawing.Size(265, 26);
             this.dateTimePicker2.TabIndex = 27;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(768, 41);
+            this.dateTimePicker1.Location = new System.Drawing.Point(1024, 47);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 21);
+            this.dateTimePicker1.Size = new System.Drawing.Size(265, 26);
             this.dateTimePicker1.TabIndex = 26;
             // 
-            // BHGMX
+            // BHGMS
             // 
-            this.BHGMX.Location = new System.Drawing.Point(655, 69);
-            this.BHGMX.Name = "BHGMX";
-            this.BHGMX.Size = new System.Drawing.Size(100, 21);
-            this.BHGMX.TabIndex = 25;
-            this.BHGMX.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.BHGMS.Location = new System.Drawing.Point(873, 84);
+            this.BHGMS.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.BHGMS.Name = "BHGMS";
+            this.BHGMS.Size = new System.Drawing.Size(132, 26);
+            this.BHGMS.TabIndex = 25;
             // 
             // Y_CTXL
             // 
-            this.Y_CTXL.Location = new System.Drawing.Point(655, 40);
+            this.Y_CTXL.Location = new System.Drawing.Point(873, 46);
+            this.Y_CTXL.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Y_CTXL.Name = "Y_CTXL";
-            this.Y_CTXL.Size = new System.Drawing.Size(100, 21);
+            this.Y_CTXL.Size = new System.Drawing.Size(132, 26);
             this.Y_CTXL.TabIndex = 24;
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(562, 72);
+            this.labelControl4.Location = new System.Drawing.Point(751, 87);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(60, 13);
+            this.labelControl4.Size = new System.Drawing.Size(75, 18);
             this.labelControl4.TabIndex = 23;
             this.labelControl4.Text = "不合格描述";
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(563, 43);
+            this.labelControl3.Location = new System.Drawing.Point(751, 50);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(72, 13);
+            this.labelControl3.Size = new System.Drawing.Size(90, 18);
             this.labelControl3.TabIndex = 22;
             this.labelControl3.Text = "原测通序列号";
-            this.labelControl3.Click += new System.EventHandler(this.labelControl3_Click);
             // 
             // PROJECT_NO
             // 
-            this.PROJECT_NO.Location = new System.Drawing.Point(430, 69);
+            this.PROJECT_NO.Location = new System.Drawing.Point(573, 121);
+            this.PROJECT_NO.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.PROJECT_NO.Name = "PROJECT_NO";
-            this.PROJECT_NO.Size = new System.Drawing.Size(100, 21);
+            this.PROJECT_NO.Size = new System.Drawing.Size(132, 26);
             this.PROJECT_NO.TabIndex = 21;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(359, 72);
+            this.labelControl1.Location = new System.Drawing.Point(479, 124);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(36, 13);
+            this.labelControl1.Size = new System.Drawing.Size(45, 18);
             this.labelControl1.TabIndex = 20;
             this.labelControl1.Text = "项目号";
             // 
             // NCMR_NO
             // 
-            this.NCMR_NO.Location = new System.Drawing.Point(430, 40);
+            this.NCMR_NO.Location = new System.Drawing.Point(318, 117);
+            this.NCMR_NO.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.NCMR_NO.Name = "NCMR_NO";
-            this.NCMR_NO.Size = new System.Drawing.Size(100, 21);
+            this.NCMR_NO.Size = new System.Drawing.Size(132, 26);
             this.NCMR_NO.TabIndex = 19;
             // 
             // NCMR编号
             // 
-            this.NCMR编号.Location = new System.Drawing.Point(358, 43);
+            this.NCMR编号.Location = new System.Drawing.Point(222, 121);
+            this.NCMR编号.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.NCMR编号.Name = "NCMR编号";
-            this.NCMR编号.Size = new System.Drawing.Size(53, 13);
+            this.NCMR编号.Size = new System.Drawing.Size(70, 18);
             this.NCMR编号.TabIndex = 18;
             this.NCMR编号.Text = "NCMR编号";
             // 
             // FX_YG
             // 
-            this.FX_YG.Location = new System.Drawing.Point(234, 69);
+            this.FX_YG.Location = new System.Drawing.Point(318, 84);
+            this.FX_YG.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.FX_YG.Name = "FX_YG";
-            this.FX_YG.Size = new System.Drawing.Size(100, 21);
+            this.FX_YG.Size = new System.Drawing.Size(132, 26);
             this.FX_YG.TabIndex = 17;
             // 
             // FX_GX
             // 
-            this.FX_GX.Location = new System.Drawing.Point(234, 39);
+            this.FX_GX.Location = new System.Drawing.Point(318, 48);
+            this.FX_GX.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.FX_GX.Name = "FX_GX";
-            this.FX_GX.Size = new System.Drawing.Size(100, 21);
+            this.FX_GX.Size = new System.Drawing.Size(132, 26);
             this.FX_GX.TabIndex = 16;
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(168, 71);
+            this.labelControl6.Location = new System.Drawing.Point(224, 87);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(48, 13);
+            this.labelControl6.Size = new System.Drawing.Size(60, 18);
             this.labelControl6.TabIndex = 15;
             this.labelControl6.Text = "发现员工";
             // 
@@ -891,9 +1045,10 @@
             // 
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
             this.simpleButton2.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.simpleButton2.Location = new System.Drawing.Point(980, 77);
+            this.simpleButton2.Location = new System.Drawing.Point(1307, 89);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(127, 25);
+            this.simpleButton2.Size = new System.Drawing.Size(169, 29);
             this.simpleButton2.TabIndex = 11;
             this.simpleButton2.Text = "开始搜索";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
@@ -902,47 +1057,52 @@
             // 
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
             this.simpleButton1.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.simpleButton1.Location = new System.Drawing.Point(980, 39);
+            this.simpleButton1.Location = new System.Drawing.Point(1307, 45);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(127, 25);
+            this.simpleButton1.Size = new System.Drawing.Size(169, 29);
             this.simpleButton1.TabIndex = 10;
             this.simpleButton1.Text = "清空条件";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(19, 42);
+            this.labelControl5.Location = new System.Drawing.Point(25, 48);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(48, 13);
+            this.labelControl5.Size = new System.Drawing.Size(60, 18);
             this.labelControl5.TabIndex = 9;
             this.labelControl5.Text = "卡片模式";
             // 
             // tsMode
             // 
             this.tsMode.EditValue = true;
-            this.tsMode.Location = new System.Drawing.Point(73, 40);
+            this.tsMode.Location = new System.Drawing.Point(97, 46);
+            this.tsMode.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tsMode.Name = "tsMode";
             this.tsMode.Properties.OffText = "Off";
             this.tsMode.Properties.OnText = "On";
-            this.tsMode.Size = new System.Drawing.Size(95, 18);
+            this.tsMode.Size = new System.Drawing.Size(127, 24);
             this.tsMode.TabIndex = 8;
             this.tsMode.Toggled += new System.EventHandler(this.tsMode_Toggled);
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(168, 43);
+            this.labelControl2.Location = new System.Drawing.Point(224, 50);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(48, 13);
+            this.labelControl2.Size = new System.Drawing.Size(60, 18);
             this.labelControl2.TabIndex = 3;
             this.labelControl2.Text = "发现工序";
             // 
             // FMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1123, 729);
+            this.ClientSize = new System.Drawing.Size(1497, 841);
             this.Controls.Add(this.splitContainerControl1);
             this.Controls.Add(this.panelControl1);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NCMR Viewer";
@@ -1028,7 +1188,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private System.Windows.Forms.TextBox BHGMX;
+        private System.Windows.Forms.TextBox BHGMS;
         private System.Windows.Forms.TextBox Y_CTXL;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl3;
@@ -1040,6 +1200,12 @@
         private System.Windows.Forms.TextBox FX_GX;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private DevExpress.XtraEditors.LabelControl 版本号;
+        private DevExpress.XtraEditors.LabelControl 责任员工;
+        private DevExpress.XtraEditors.LabelControl labelControl8;
+        private System.Windows.Forms.TextBox ZR_GX;
+        private System.Windows.Forms.TextBox ZR_YG;
+        private System.Windows.Forms.TextBox REV;
     }
 }
 
