@@ -115,6 +115,11 @@ namespace NCMRViewer
 
                 }
             }
+            if (DateTime.Compare(dateTimePicker1.Value, dateTimePicker2.Value) > 0)
+            {
+                MessageBox.Show("开始时间不可大于结束时间！");
+                return;
+            }
             sentence = sentence + " FX_DATE >= " + "'"+dateTimePicker1.Text+"'" + " AND FX_DATE <= " + "'" + dateTimePicker2.Text + "'";
             DataTable dt = DAL.LoadData(sentence);
             gridControl1.DataSource = dt;
@@ -137,7 +142,7 @@ namespace NCMRViewer
                 contents.Text = "";
             }
 
-            if (dateTimePicker2.Value > dateTimePicker1.Value) MessageBox.Show("easier than I though");
+
             dateTimePicker1.Value = DateTime.Now;
             dateTimePicker2.Value = DateTime.Now;
 
