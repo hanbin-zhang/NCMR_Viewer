@@ -120,7 +120,20 @@ namespace NCMRViewer
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
+            System.Windows.Forms.TextBox[] infos = { FX_GX, FX_YG, ZR_GX, ZR_YG, Y_CTXH, BHGMS, NCMR_NO, PROJECT_NO, REV };
+            foreach (System.Windows.Forms.TextBox contents in infos)
+            {
+                contents.Text = "";
+            }
 
+            if (dateTimePicker2.Value > dateTimePicker1.Value) MessageBox.Show("easier than I though");
+            dateTimePicker1.Value = DateTime.Now;
+            dateTimePicker2.Value = DateTime.Now;
+
+            DataTable dt = DAL.LoadData("SELECT *, NCMR_NO + '.jpg' AS ScanImage FROM [NCMR].[dbo].[NCMR_MAIN]");
+
+            gridControl1.DataSource = dt;
+            cardView1.RefreshData();
         }
     }
 }
