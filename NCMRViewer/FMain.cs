@@ -110,11 +110,22 @@ namespace NCMRViewer
             {
                 if (contents.Text != "")
                 {
-                    sentence = sentence + " " + contents.Name + " LIKE " + contents.Text + " AND ";
+                    sentence = sentence + " " + contents.Name + " LIKE " + "'%" + contents.Text+"%'" + " AND ";
+                    
+
                 }
             }
-            sentence = sentence + " FX_DATE >= " + dateTimePicker1.Text + " AND FX_DATE <= " + dateTimePicker2.Text;
-            Console.WriteLine(sentence);
+            sentence = sentence + " FX_DATE >= " + "'"+dateTimePicker1.Text+"'" + " AND FX_DATE <= " + "'" + dateTimePicker2.Text + "'";
+            DataTable dt = DAL.LoadData(sentence);
+            gridControl1.DataSource = dt;
+            if (tsMode.IsOn)
+            {
+                cardView1.RefreshData();
+            }
+            else
+            {
+                gridView1.RefreshData();
+            }
              
         }
 
